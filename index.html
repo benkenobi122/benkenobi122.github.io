@@ -18,8 +18,8 @@
     }
 
     header {
-      padding: 30px;
-      font-size: 3rem;
+      padding: 20px;
+      font-size: clamp(2rem, 6vw, 3rem);
       font-weight: bold;
       animation: glow 2s infinite alternate;
     }
@@ -32,23 +32,24 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      padding: 10px;
     }
 
     nav button {
       background: #00ff88;
       border: none;
-      padding: 12px 20px;
-      border-radius: 15px;
+      padding: 10px 16px;
+      border-radius: 12px;
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
+      font-size: 0.9rem;
     }
 
     nav button:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       background: #00cc6a;
     }
 
@@ -57,17 +58,26 @@
 
     .card {
       background: rgba(0,0,0,0.3);
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 20px;
-      width: 85%;
+      margin: 15px auto;
+      padding: 20px;
+      border-radius: 18px;
+      width: 90%;
       max-width: 650px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.6);
       backdrop-filter: blur(10px);
     }
 
+    h2 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+
+    p {
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    }
+
     img {
       max-width: 100%;
+      height: auto;
       border-radius: 15px;
       margin-top: 10px;
     }
@@ -75,42 +85,45 @@
     a.button {
       display: inline-block;
       margin-top: 10px;
-      padding: 12px 20px;
+      padding: 10px 16px;
       background: white;
       color: black;
-      border-radius: 12px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.9rem;
     }
 
     footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 0.9rem;
+      margin-top: 30px;
+      padding: 15px;
+      font-size: 0.8rem;
       opacity: 0.7;
     }
 
-    /* ✨ SPARKLES */
+    /* ✨ sparkles */
     .sparkle {
       position: fixed;
-      font-size: 18px;
+      font-size: 16px;
       animation: float 4s infinite ease-in-out;
       opacity: 0.7;
+      pointer-events: none;
     }
 
     @keyframes float {
       0% { transform: translateY(0px); }
-      50% { transform: translateY(-25px); }
+      50% { transform: translateY(-20px); }
       100% { transform: translateY(0px); }
     }
 
-    /* 💖 BRACES DIVA */
+    /* 💖 braces diva */
     .braces {
-      font-size: 20px;
-      margin-top: 10px;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      margin-top: 8px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -158,7 +171,7 @@
 <div id="gallery" class="page">
   <div class="card">
     <h2>Gallery 📸</h2>
-    
+   
     <img src="me.jpg" alt="Me">
     <img src="meme.png" alt="Meme">
   </div>
@@ -168,7 +181,7 @@
   Built by Ben 💚 | 100% Diva Energy
 </footer>
 
-<!-- ✨ SPARKLES -->
+<!-- ✨ sparkles -->
 <div class="sparkle" style="top:20%; left:10%;">✨</div>
 <div class="sparkle" style="top:40%; left:80%;">💖</div>
 <div class="sparkle" style="top:70%; left:30%;">✨</div>
